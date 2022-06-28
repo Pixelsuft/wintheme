@@ -8,10 +8,10 @@ screen = pygame.display.set_mode((640, 480))
 
 wm_info = pygame.display.get_wm_info()
 hwnd = int(wm_info.get('window'))
-theme = wintheme.get_system_theme()
+theme = wintheme.get_apps_theme()
 result = wintheme.set_window_theme(hwnd, theme)
 pygame.display.set_caption(
-    f'System Theme: {wintheme.theme_to_string[theme]}, Result: {wintheme.error_to_string[result]}'
+    f'Theme: {wintheme.theme_to_string[theme]}, Result: {wintheme.error_to_string[result]}'
 )
 running = True
 

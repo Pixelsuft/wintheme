@@ -11,7 +11,7 @@ class Ui_MainWindow(object):
         MainWindow.resize(686, 546)
 
         self.hwnd = int(MainWindow.winId())
-        self.theme = wintheme.get_system_theme()
+        self.theme = wintheme.get_apps_theme()
         self.theme_result = wintheme.set_window_theme(self.hwnd, self.theme)
         MainWindow.setStyleSheet(open('Darkeum.qss' if self.theme == wintheme.THEME_DARK else 'Aqua.qss').read())
 
@@ -71,7 +71,7 @@ class Ui_MainWindow(object):
 
         MainWindow.setWindowTitle(_translate(
             "MainWindow",
-            f"System Theme: {wintheme.theme_to_string[self.theme]}, "
+            f"Theme: {wintheme.theme_to_string[self.theme]}, "
             f"Result: {wintheme.error_to_string[self.theme_result]}")
         )
 
