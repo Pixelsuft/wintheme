@@ -3,15 +3,15 @@ import sys
 
 REG_PATH = 'Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize'
 
-THEME_UNKNOWN = 1 << 2
-THEME_LIGHT = 2 << 2
-THEME_DARK = 3 << 2
+THEME_UNKNOWN = 1 << 1
+THEME_LIGHT = 1 << 2
+THEME_DARK = 1 << 3
 
-ERROR_SUCCESS = 1 << 2
-ERROR_NOT_WINDOWS = 2 << 2
-ERROR_FUNCTION_NOT_FOUND = 3 << 2
-ERROR_UNKNOWN_THEME = 4 << 2
-ERROR_NULL_HWND = 5 << 2
+ERROR_SUCCESS = 1 << 1
+ERROR_NOT_WINDOWS = 1 << 2
+ERROR_FUNCTION_NOT_FOUND = 1 << 3
+ERROR_UNKNOWN_THEME = 1 << 4
+ERROR_NULL_HWND = 1 << 5
 
 theme_to_string = {
     THEME_UNKNOWN: 'Unknown',
